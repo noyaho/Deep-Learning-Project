@@ -217,7 +217,7 @@ class UNet(nn.Module):
 
     """
 
-    # add Op???
+    
     def __init__(self, good_matrix_torch, input_channels=1, output_channels=1, hidden_channels=64, levels=2):  # , Cop
         super(UNet, self).__init__()
         self.good_matrix_torch = good_matrix_torch
@@ -799,7 +799,4 @@ plt.plot(x_ttt_pred_A1[0].T[10:1150].cpu())  # / np.linalg.norm(x_ttt_pred_A1[0]
 plt.plot(convolved_signal_train[0].T[10:1150] / np.linalg.norm(convolved_signal_train[0].T[10:1150]))
 
 loss_xpred_xreal = criterion(torch.from_numpy(convolved_signal_train[0].T[10:1150]).float(), convolved_signal_result[0].T[10:1150])
-# loss_xpred_xreal = convolved_signal_result[0].T[10:1150].cpu() - convolved_signal_train[0].T[10:1150]
-# loss_xpred_xreal = x_ttt_pred_A1[0].T[10:1150] - X_train_A1_torch[0].T[10:1150]
-# max_loss_xpred_xreal = torch.max(loss_xpred_xreal)
 print(loss_xpred_xreal)
