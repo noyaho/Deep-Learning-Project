@@ -780,7 +780,6 @@ kernel = np.exp(-x**2 / (2 * sigma**2))
 kernel /= np.sum(kernel)
 
 # Convert the signal and kernel to numpy arrays
-# signal_np = x_ttt_pred_optim_A.cpu()
 kernel_np = kernel.reshape(1, -1)
 
 # Perform convolution
