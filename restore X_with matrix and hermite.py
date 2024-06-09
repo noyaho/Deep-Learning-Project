@@ -392,10 +392,6 @@ def predict(model, y, device='gpu'):
 
 #################################################################
 
-time, signal = np.loadtxt(JsonParameters.data_dir + '500 micron gap 100hz 200ps 3000av asops34.txt', skiprows=5,
-                          unpack=True,
-                          usecols=[0, 1])
-
 aoi_length = JsonParameters.finish_aoi - JsonParameters.start_aoi
 split_time = time[JsonParameters.start_aoi:JsonParameters.finish_aoi]
 
